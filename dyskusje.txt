@@ -13,3 +13,9 @@ Okno będzie mieć również menu z funkcjami typu zamknij, nowy, pomoc, autorzy
 Wywiązała się jeszcze dyskusja na temat grania przeciwko komputerowi, ale uznaliśmy, że robimy grę multiplayer.
 
 
+Zuza rozpoczęła projekt i zrobiła od siebie bardzo dużo. Od wyglądu okienka, poprzez wyskakujące wiadomości, aż po stworzenie buttonów
+oraz zapoczątkowanie zmieniania wartości na X/O lub puste pole. To jej udało się rozwiązać zaistniały problem, który zauważyła Maja,
+że guziki były od siebie zależne. 
+
+Maja dodała od siebie informacje pojawiające się w okienku O aplikacji, a także podjęła nieudaną próbę poskromienia buttonów.
+
