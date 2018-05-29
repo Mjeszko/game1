@@ -1,1 +1,15 @@
 Tu będziemy przeprowadzać dyskuje i omawiać nasz projekt. 
+
+29.05.2018 - raport z dotychczasowych dyskusji
+
+Na początku padł pomysł zrobienia 3 list z pozycjami a/b/c (jedna lista pod drugą - tworząc planszę 3x3)
+Gracze wybieraliby listę i pozycję oraz zmieniali jej wartość na X/O. 
+
+Następnie wpadliśmy na lepszy pomysł - w tkinter zrobimy okienko gry, w którym znajdują się kwadratowe buttony 3x3, layout podobny do klasycznego sapera.
+Po naciśnięciu na guzik, zmienia on wartość na X/O lub puste pole.
+
+Okno będzie mieć również menu z funkcjami typu zamknij, nowy, pomoc, autorzy. 
+
+Wywiązała się jeszcze dyskusja na temat grania przeciwko komputerowi, ale uznaliśmy, że robimy grę multiplayer.
+
+
