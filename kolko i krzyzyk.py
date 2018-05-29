@@ -1,3 +1,4 @@
+import tkinter
 from tkinter import *
 from tkinter import messagebox
 
@@ -7,11 +8,15 @@ def akcja():
 def pomoc():
    Pomoc = Toplevel()
    Pomoc.title ('Pomoc')
-   Pomoc.geometry ('500x300') 
+   Pomoc.geometry ('500x300')
+   labelpomoc = tkinter.Label(Pomoc, text='pomoc')
+   labelpomoc.pack(side=tkinter.TOP) 
 def oaplikacji():
    about = Toplevel()
    about.title ('O aplikacji')
    about.geometry ('500x300')
+   labelabout = tkinter.Label(about, text='O GRZE :) niech tu ktoś wpisze jakieś info typu kto robił itd')
+   labelabout.pack(side=tkinter.TOP)
 def nowy():
    nic
 def zakończ():
