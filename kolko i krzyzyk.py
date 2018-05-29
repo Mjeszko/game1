@@ -32,6 +32,12 @@ Aplikacja.geometry ('280x300')
 Aplikacja.resizable(0, 0)
 pasekMenu = Menu(Aplikacja)
 
+def bttn1x():
+   przyciskx = Button (height=5, width=10, text='X',command=bttn1o).place (x=10,y=10)
+def bttn1o():
+   przycisko = Button (height=5, width=10, text='O',command=bttn).place (x=10,y=10)
+def bttn():
+   przycisk = Button (height=5, width=10, text='',command=bttn1x).place (x=10,y=10)
 
 
 menuPlik = Menu(pasekMenu, tearoff=0)
@@ -56,7 +62,7 @@ menuHelp.add_command(label="O aplikacji...", command=oaplikacji)
 Aplikacja.config(menu=pasekMenu)
 
 
-przycisk = Button (height=5, width=10, text='',command=akcja).place (x=10,y=10)
+przycisk = Button (height=5, width=10, text='',command=bttn1x).place (x=10,y=10)
 przycisk2 = Button (height=5, width=10, text='',command=akcja).place (x=100,y=10)
 przycisk3 = Button (height=5, width=10, text='',command=akcja).place (x=190,y=10)
 przycisk4 = Button (height=5, width=10, text='',command=akcja).place (x=10,y=105)
