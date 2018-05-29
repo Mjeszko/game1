@@ -17,5 +17,9 @@ Zuza rozpoczęła projekt i zrobiła od siebie bardzo dużo. Od wyglądu okienka
 oraz zapoczątkowanie zmieniania wartości na X/O lub puste pole. To jej udało się rozwiązać zaistniały problem, który zauważyła Maja,
 że guziki były od siebie zależne. 
 
-Maja dodała od siebie informacje pojawiające się w okienku O aplikacji, a także podjęła nieudaną próbę poskromienia buttonów.
+Maja dodała od siebie informacje pojawiające się w okienku O aplikacji, a także podjęła nieudaną próbę poskromienia buttonów. 
+
+Z tego, co udało nam się zrobić wysnuliśmy następne wnioski - że potrzebujemy jeszcze kasowania buttonów, stworzenia warunków wygranej, przegranej oraz remisu,
+a także dopracowanie funkcji nowy oraz cofnij. Zuza zauważyła, że aby stworzyć odpowiednie warunki, należy wskazać na aktywność buttonów. Maja znalazła odpowiadające
+za to parametry active oraz destroy.
 

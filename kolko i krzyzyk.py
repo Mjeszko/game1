@@ -15,7 +15,7 @@ def oaplikacji():
    about = Toplevel()
    about.title ('O aplikacji')
    about.geometry ('500x300')
-   labelabout = tkinter.Label(about, text='O GRZE :) niech tu ktoś wpisze jakieś info typu kto robił itd')
+   labelabout = tkinter.Label(about, text='Aplikacja stworzona przez grupe studentow\n Uniwersytetu Kazimierza Wielkiego w Bydgoszczy\n w ramach zaliczenia zajęć z\n Wprowadzenia do programowania obiektowego (Python/Java)\n w składzie: Milosz Krupa, Zaneta Lowicka, Maja Prezner, Zuzanna Sugier.')
    labelabout.pack(side=tkinter.TOP)
 def nowy():
    nic
