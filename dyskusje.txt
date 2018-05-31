@@ -1,5 +1,8 @@
 Tu będziemy przeprowadzać dyskuje i omawiać nasz projekt. 
 
+
+
+
 29.05.2018 - raport z dotychczasowych dyskusji
 
 Na początku padł pomysł zrobienia 3 list z pozycjami a/b/c (jedna lista pod drugą - tworząc planszę 3x3)
@@ -22,4 +25,21 @@ Maja dodała od siebie informacje pojawiające się w okienku O aplikacji, a tak
 Z tego, co udało nam się zrobić wysnuliśmy następne wnioski - że potrzebujemy jeszcze kasowania buttonów, stworzenia warunków wygranej, przegranej oraz remisu,
 a także dopracowanie funkcji nowy oraz cofnij. Zuza zauważyła, że aby stworzyć odpowiednie warunki, należy wskazać na aktywność buttonów. Maja znalazła odpowiadające
 za to parametry active oraz destroy.
+
+
+
+
+31.05.2018 - ułożenie myśli, obecnych problemów i planów
+
+Zuza: póki co, nasze kółko i krzyżyk działa tak, że za naciśnięciem buttona, na wierzchu pojawia się nowy. Mając na uwadze potencjał stworzenia nieskończonej ilości buttonów w ten sposób (i spowolnienia pracy komputera), musimy znaleźć komendę, która usuwa użyty button. 
+Gdy znajdzie się taka komenda (pokombinować z "button.destroy"?), należy ją wkleić do każdego defa, którzy tworzy nowy button. W ten sposób, po naciśnięciu buttona automatycznie się on usuwa i wkleja nowego buttona na swoje miejsce. Zalecam stworzenie osobnej aplikacji z 2 buttonami obok siebie i testowanie kodu tak, aby lewy buttun usunął prawy.
+
+Problemem jest jeszcze ustawienie tekstu w okienku Pomoc/O Aplikacji na samym środku. Póki co, umiemy tylko ustawić tekst w TOP/BOTTOM/LEFT/RIGHT. 
+
+Stworzenie skryptu do opcji "Nowy" powinno być bardzo łatwe. 
+Stworzenie skryptu do "Cofnij" może być trochę trudniejsze.
+
+Wyskakujące powiadomienie o zakończonej grze może być napisane za pomocą warunków IF. Na przykład: IF bttnx AND bttn2x AND bttn3x are ACTIVE (lub EXIST? nie wiem), to wyskakuje Toplevel w tkinter z wiadomością, że X wygrały (po czym uruchamia się "Nowy"). Wyżej wymienione buttony odpowiadają za pierwsze trzy górne pola ze znakiem X.
+
+
 
