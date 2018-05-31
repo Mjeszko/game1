@@ -2,20 +2,17 @@ import tkinter
 from tkinter import *
 from tkinter import messagebox
 
-def akcja():
-   'tu ktoś ma wpisać skrypt aby guziki zmieniały swóje imię na X/O/puste'
-
 def pomoc():
    Pomoc = Toplevel()
    Pomoc.title ('Pomoc')
    Pomoc.geometry ('500x300')
-   labelpomoc = tkinter.Label(Pomoc, text='pomoc')
+   labelpomoc = tkinter.Label(Pomoc, text='\n\n\n\n\n\n\n\n Kliknij na przycisk, aby zmienił się w X, O lub puste pole.\n W razie czego, skorzystaj z opcji "Cofnij" albo "Nowy"')
    labelpomoc.pack(side=tkinter.TOP) 
 def oaplikacji():
    about = Toplevel()
    about.title ('O aplikacji')
    about.geometry ('500x300')
-   labelabout = tkinter.Label(about, text='Aplikacja stworzona przez grupe studentow\n Uniwersytetu Kazimierza Wielkiego w Bydgoszczy\n w ramach zaliczenia zajęć z\n Wprowadzenia do programowania obiektowego (Python/Java)\n w składzie: Milosz Krupa, Zaneta Lowicka, Maja Prezner, Zuzanna Sugier.')
+   labelabout = tkinter.Label(about, text='\n\n\n\n\n\n Aplikacja stworzona przez grupe studentow\n Uniwersytetu Kazimierza Wielkiego w Bydgoszczy\n w ramach zaliczenia zajęć z\n Wprowadzenia do programowania obiektowego (Python/Java)\n w składzie: Milosz Krupa, Zaneta Lowicka, Maja Prezner, Zuzanna Sugier.')
    labelabout.pack(side=tkinter.TOP)
 def nowy():
    nic
