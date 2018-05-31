@@ -41,5 +41,8 @@ Stworzenie skryptu do "Cofnij" może być trochę trudniejsze.
 
 Wyskakujące powiadomienie o zakończonej grze może być napisane za pomocą warunków IF. Na przykład: IF bttnx AND bttn2x AND bttn3x are ACTIVE (lub EXIST? nie wiem), to wyskakuje Toplevel w tkinter z wiadomością, że X wygrały (po czym uruchamia się "Nowy"). Wyżej wymienione buttony odpowiadają za pierwsze trzy górne pola ze znakiem X.
 
+UPDATE: ogarnęłam, że przecież można wycentrować tekst za pomocą \n. Tylko to trochę słabe, ale jest.
+
+
 
 
