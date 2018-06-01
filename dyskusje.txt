@@ -46,3 +46,14 @@ UPDATE: ogarnęłam, że przecież można wycentrować tekst za pomocą \n. Tylk
 
 
 
+01.06.2018
+
+Maja: Za pomysłem Zuzy stworzyłam pierwszy warunek IF dotyczący wygranej. Udało mi się również znaleźć parametry odpowiadające za
+aktywność guzików. Po przeprowadzonych testach okazało się, że wartość disabled wyłącza możliwość zmiany treści guzika (jeśli zrezygnowaliśmy z X i ustawiliśmy O, nie ma możliwości powrotu do X). Minusem tego jest to, że pola pozostałe z X wciąż działają,
+a co za tym idzie, treść warunku, jeśli chodzi o X, nie zadziała, gdyż jest ona równa wartości disabled.
+
+Poza tym należałoby poprawić warunek tak, by aplikacja wiedziała, że w momencie pojawienia się 3 tych samych znaków w linii, powinna automatycznie wyrzucić okienko informujące, nawet jeśli nie wszystkie pola zostały wypełnione. 
+
+Wydaje mi się, że gdybyśmy chcieli zostać przy korzystaniu ze state='disabled' w stosunku do buttonów, można by spróbować przeistoczyć command w przypadku bttnO oraz usunąć definicje bttn.
+
+

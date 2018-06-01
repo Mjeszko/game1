@@ -32,21 +32,21 @@ pasekMenu = Menu(Aplikacja)
 def bttn1x():
    przyciskx = Button (height=5, width=10, text='X',command=bttn1o).place (x=10,y=10)
 def bttn1o():
-   przycisko = Button (height=5, width=10, text='O',command=bttn).place (x=10,y=10)
+   przycisko = Button (height=5, width=10, text='O',command=bttn, state='disabled').place (x=10,y=10)
 def bttn():
    przycisk = Button (height=5, width=10, text='',command=bttn1x).place (x=10,y=10)
 
 def bttn2x():
    przycisk2x = Button (height=5, width=10, text='X',command=bttn2o).place (x=100,y=10)
 def bttn2o():
-   przycisk2o = Button (height=5, width=10, text='O',command=bttn2).place (x=100,y=10)
+   przycisk2o = Button (height=5, width=10, text='O',command=bttn2, state='disabled').place (x=100,y=10)
 def bttn2():
    przycisk2 = Button (height=5, width=10, text='',command=bttn2x).place (x=100,y=10)
 
 def bttn3x():
    przycisk3x = Button (height=5, width=10, text='X',command=bttn3o).place (x=190,y=10)
 def bttn3o():
-   przycisk3o = Button (height=5, width=10, text='O',command=bttn3).place (x=190,y=10)
+   przycisk3o = Button (height=5, width=10, text='O',command=bttn3, state = 'disabled').place (x=190,y=10)
 def bttn3():
    przycisk3 = Button (height=5, width=10, text='',command=bttn3x).place (x=190,y=10)
 def bttn4x():
@@ -89,6 +89,13 @@ def bttn9o():
    przycisk9o = Button (height=5, width=10, text='O',command=bttn9).place (x=190,y=200)
 def bttn9():
    przycisk9 = Button (height=5, width=10, text='',command=bttn9x).place (x=190,y=200)
+
+if bttn1o and bttn2o and bttn3o == 'disabled':
+    win1O = Toplevel
+    win1O.title ('Wygraly O!')
+    win1O.geometry ('500x300')
+    labelwin1O = tkinter.Label (win1O, text ='Koniec gry!')
+    labelwin1O.pack (side=tkinter.TOP)
 
 
 menuPlik = Menu(pasekMenu, tearoff=0)
