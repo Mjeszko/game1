@@ -67,3 +67,9 @@ Myślę, że na tym poziomie kodu już ciężko byłoby na to wpłynąć. Jeśli
 
 
 
+Maja: Po drobnych ustaleniach i przemyśleniach doszliśmy do wniosku, że najlepiej bedzie zrezygnować z 'disabled', które lepiej by działało, gdyby nasze buttony działały inaczej.
+Ze względu na zbliżający się termin postanowiliśmy już nie kombinować i nie tworzyć wszystkiego od podstaw. Pozostało nam więc:
+
+Poprawa skryptu "Nowy" - dostosowanie zakończenia main(), aby nie pojawiało się dodatkowe, puste okno.
+Stworzenie skryptu do "Cofnij", może być trochę trudniejsze.
+Kasowanie buttonów za naciśnięciem buttona.
