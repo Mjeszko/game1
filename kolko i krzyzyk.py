@@ -101,14 +101,14 @@ if bttn1o and bttn2o and bttn3o == 'disabled':
 menuPlik = Menu(pasekMenu, tearoff=0)
 pasekMenu.add_cascade(label="Plik", menu=menuPlik)
 
-menuPlik.add_command(label="Nowy", command=akcja)
+menuPlik.add_command(label="Nowy")
 menuPlik.add_separator()
 menuPlik.add_command(label="Zakończ", command=zakończ)
 
 menuEdycja = Menu(pasekMenu, tearoff=0)
 pasekMenu.add_cascade(label="Edycja", menu=menuEdycja)
 
-menuEdycja.add_command(label="Conij", command=akcja)
+menuEdycja.add_command(label="Conij")
 
 menuHelp = Menu(pasekMenu, tearoff=0)
 pasekMenu.add_cascade(label="Pomoc", menu=menuHelp)
