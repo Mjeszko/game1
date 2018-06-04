@@ -57,3 +57,13 @@ Poza tym należałoby poprawić warunek tak, by aplikacja wiedziała, że w mome
 Wydaje mi się, że gdybyśmy chcieli zostać przy korzystaniu ze state='disabled' w stosunku do buttonów, można by spróbować przeistoczyć command w przypadku bttnO oraz usunąć definicje bttn.
 
 
+4.06.2018
+
+Zuza: Zgodnie z tym co Maja napisała, doszłam do pewnych wniosków. Przede wszystkim, nasza gra działa tak, że najpierw stawiasz X, a potem dopiero O. (jeden gracz klika dwa razy). Niestety oznacza to, że jeżeli gracz O chce zablokować pewne zwycięstwo gracza X, najpierw musi postawić w swoim miejscu znak X, a program od razu to przeczyta jako wygrana dla X. 
+
+Dlatego o ile podoba mi się opcja z 'disabled' dla weryfikowania zwyciestwa warunkami IF, musielibyśmy znaleźć rozwiązanie odnośnie stawiania znaków - inaczej warunki zwycięstwa będą działały za wcześnie. Np. gdyby O były stawiane klikaniem prawym przyciskiem myszy, albo gdyby najpierw stawiało się X, a potem O (naprzemiennie). 
+
+Myślę, że na tym poziomie kodu już ciężko byłoby na to wpłynąć. Jeśli chcemy uratować warunki wygranej i przegranej, moglibyśmy dodać do warunku, że dana sekwencja musi istnieć przez conajmniej 2-3 sekundy (aby dać czas na zmienienie X na O dla drugiego gracza).
+
+
+
