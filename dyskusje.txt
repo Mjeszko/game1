@@ -73,3 +73,6 @@ Ze względu na zbliżający się termin postanowiliśmy już nie kombinować i n
 Poprawa skryptu "Nowy" - dostosowanie zakończenia main(), aby nie pojawiało się dodatkowe, puste okno.
 Stworzenie skryptu do "Cofnij", może być trochę trudniejsze.
 Kasowanie buttonów za naciśnięciem buttona.
+
+06.06
+Miłosz: Sądzę, że stworzenie skryptu cofnij nie ma sensu, gdyż swój ruch zawsze możemy poprawić.
