@@ -76,3 +76,6 @@ Kasowanie buttonów za naciśnięciem buttona.
 
 06.06
 Miłosz: Sądzę, że stworzenie skryptu cofnij nie ma sensu, gdyż swój ruch zawsze możemy poprawić.
+
+07.06
+Żaneta: Aktualnie można cofnąć swój ostatni ruch,nie więcej. Co się zmieniło : dodanie graczy(ustawienie x i o na zmianę), zmiana obsługi kliknięcia przycisku, sprawdzanie,czy ktoś wygrał,naprawiono tworzenie nowej gry,automatyczne czyszczenie planszy.
