@@ -2,14 +2,21 @@ import tkinter
 from tkinter import *
 from tkinter import messagebox
 
-def main():
+przyciski = []
+obecnyGracz = 'X'
+ostatniRuch = -1
+
+def przygotujOkno():
+    global przyciski
+    global obecnyGracz
+    global ostatniRuch
 
     def pomoc():
         Pomoc = Toplevel()
         Pomoc.title ('Pomoc')
         Pomoc.geometry ('500x300')
-        labelpomoc = tkinter.Label(Pomoc, text='\n\n\n\n\n\n\n\n Kliknij na przycisk, aby zmienił się w X, O lub puste pole.\n W razie czego, skorzystaj z opcji "Cofnij" albo "Nowy"')
-        labelpomoc.pack(side=tkinter.TOP) 
+        labelpomoc = tkinter.Label(Pomoc, text='\n\n\n\n\n\n\n\n Kliknij na przycisk, aby zmienił się w X lub O.\n W razie czego, skorzystaj z opcji "Cofnij" albo "Nowy"')
+        labelpomoc.pack(side=tkinter.TOP)
     def oaplikacji():
         about = Toplevel()
         about.title ('O aplikacji')
@@ -18,96 +25,39 @@ def main():
         labelabout.pack(side=tkinter.TOP)
     def nowy():
         restart = messagebox.askyesno('Nowa gra', 'Czy chcesz rozpoczac nowa gre?')
-        if restart ==True:
-            main()
-     
-    def zakończ():
+        if restart:
+            czyscPlansze()
+    def zakoncz():
         zmienna = messagebox.askyesno('ZAMYKANIE','CZY CHCESZ ZAMKNAC PROGRAM?')
-         if zmienna == True:
+        if zmienna == True:
             Aplikacja.destroy()
             return
     def cofnij():
-         nic
+        global ostatniRuch
+        if ostatniRuch == -1:
+            messagebox.showerror("Brak ruchu", "Nie można cofnąć.")
+            return
+        przyciski[ostatniRuch]['text'] = ''
+        zmianaGracza()
+        ostatniRuch = -1
+
     Aplikacja = Tk()
     Aplikacja.title ('Kółko i Krzyżyk')
     Aplikacja.geometry ('280x300')
     Aplikacja.resizable(0, 0)
     pasekMenu = Menu(Aplikacja)
 
-    def bttn1x():
-        przyciskx = Button (height=5, width=10, text='X',command=bttn1o).place (x=10,y=10)
-    def bttn1o():
-        przycisko = Button (height=5, width=10, text='O',command=bttn).place (x=10,y=10)
-    def bttn():
-        przycisk = Button (height=5, width=10, text='',command=bttn1x).place (x=10,y=10)
-
-    def bttn2x():
-        przycisk2x = Button (height=5, width=10, text='X',command=bttn2o).place (x=100,y=10)
-    def bttn2o():
-        przycisk2o = Button (height=5, width=10, text='O',command=bttn2).place (x=100,y=10)
-    def bttn2():
-        przycisk2 = Button (height=5, width=10, text='',command=bttn2x).place (x=100,y=10)
-
-    def bttn3x():
-        przycisk3x = Button (height=5, width=10, text='X',command=bttn3o).place (x=190,y=10)
-    def bttn3o():
-        przycisk3o = Button (height=5, width=10, text='O',command=bttn3).place (x=190,y=10)
-    def bttn3():
-        przycisk3 = Button (height=5, width=10, text='',command=bttn3x).place (x=190,y=10)
-    def bttn4x():
-        przycisk4x = Button (height=5, width=10, text='X',command=bttn4o).place (x=10,y=105)
-    def bttn4o():
-        przycisk4o = Button (height=5, width=10, text='O',command=bttn4).place (x=10,y=105)
-    def bttn4():
-        przycisk4 = Button (height=5, width=10, text='',command=bttn4x).place (x=10,y=105)
-
-    def bttn5x():
-        przycisk5x = Button (height=5, width=10, text='X',command=bttn5o).place (x=100,y=105)
-    def bttn5o():
-        przycisk5o = Button (height=5, width=10, text='O',command=bttn5).place (x=100,y=105)
-    def bttn5():
-        przycisk5 = Button (height=5, width=10, text='',command=bttn5x).place (x=100,y=105)
-
-    def bttn6x():
-        przycisk6x = Button (height=5, width=10, text='X',command=bttn6o).place (x=190,y=105)
-    def bttn6o():
-        przycisk6o = Button (height=5, width=10, text='O',command=bttn6).place (x=190,y=105)
-    def bttn6():
-        przycisk6 = Button (height=5, width=10, text='',command=bttn6x).place (x=190,y=105)
-    def bttn7x():
-        przycisk7x = Button (height=5, width=10, text='X',command=bttn7o).place (x=10,y=200)
-    def bttn7o():
-        przycisk7o = Button (height=5, width=10, text='O',command=bttn7).place (x=10,y=200)
-    def bttn7():
-        przycisk7 = Button (height=5, width=10, text='',command=bttn7x).place (x=10,y=200)
-
-    def bttn8x():
-        przycisk8x = Button (height=5, width=10, text='X',command=bttn8o).place (x=100,y=200)
-    def bttn8o():
-        przycisk8o = Button (height=5, width=10, text='O',command=bttn8).place (x=100,y=200)
-    def bttn8():
-        przycisk8 = Button (height=5, width=10, text='',command=bttn8x).place (x=100,y=200)
-
-    def bttn9x():
-        przycisk9x = Button (height=5, width=10, text='X',command=bttn9o).place (x=190,y=200)
-    def bttn9o():
-        przycisk9o = Button (height=5, width=10, text='O',command=bttn9).place (x=190,y=200)
-    def bttn9():
-        przycisk9 = Button (height=5, width=10, text='',command=bttn9x).place (x=190,y=200)
-
-
-
     menuPlik = Menu(pasekMenu, tearoff=0)
     pasekMenu.add_cascade(label="Plik", menu=menuPlik)
 
     menuPlik.add_command(label="Nowy", command=nowy)
     menuPlik.add_separator()
-    menuPlik.add_command(label="Zakończ", command=zakończ)
+    menuPlik.add_command(label="Zakończ", command=zakoncz)
 
     menuEdycja = Menu(pasekMenu, tearoff=0)
     pasekMenu.add_cascade(label="Edycja", menu=menuEdycja)
 
-    menuEdycja.add_command(label="Conij")
+    menuEdycja.add_command(label="Cofnij", command=cofnij)
 
     menuHelp = Menu(pasekMenu, tearoff=0)
     pasekMenu.add_cascade(label="Pomoc", menu=menuHelp)
@@ -118,17 +68,85 @@ def main():
 
     Aplikacja.config(menu=pasekMenu)
 
-
-    przycisk = Button (height=5, width=10, text='',command=bttn1x).place (x=10,y=10)
-    przycisk2 = Button (height=5, width=10, text='',command=bttn2x).place (x=100,y=10)
-    przycisk3 = Button (height=5, width=10, text='',command=bttn3x).place (x=190,y=10)
-    przycisk4 = Button (height=5, width=10, text='',command=bttn4x).place (x=10,y=105)
-    przycisk5 = Button (height=5, width=10, text='',command=bttn5x).place (x=100,y=105)
-    przycisk6 = Button (height=5, width=10, text='',command=bttn6x).place (x=190,y=105)
-    przycisk7 = Button (height=5, width=10, text='',command=bttn7x).place (x=10,y=200)
-    przycisk8 = Button (height=5, width=10, text='',command=bttn8x).place (x=100,y=200)
-    przycisk9 = Button (height=5, width=10, text='',command=bttn9x).place (x=190,y=200)
+    przygotujPlansze()
 
     Aplikacja.mainloop()
-main()_
 
+def czyscPlansze():
+    global przyciski
+    global obecnyGracz
+    global ostatniRuch
+
+    for przycisk in przyciski:
+        przycisk['text'] = ''
+    obecnyGracz = 'X'
+    ostatniRuch = -1
+
+def sprawdzZwyciestwoNaIndeksach(i1, i2, i3):
+    global przyciski
+
+    return przyciski[i1]['text'] != '' and przyciski[i1]['text'] == przyciski[i2]['text'] == przyciski[i3]['text']
+
+def sprawdzZwyciestwo():
+    global przyciski
+
+    return sprawdzZwyciestwoNaIndeksach(0, 1, 2) or \
+           sprawdzZwyciestwoNaIndeksach(3, 4, 5) or \
+           sprawdzZwyciestwoNaIndeksach(6, 7, 8) or \
+           sprawdzZwyciestwoNaIndeksach(0, 3, 6) or \
+           sprawdzZwyciestwoNaIndeksach(1, 4, 7) or \
+           sprawdzZwyciestwoNaIndeksach(2, 5, 8) or \
+           sprawdzZwyciestwoNaIndeksach(0, 4, 8) or \
+           sprawdzZwyciestwoNaIndeksach(2, 4, 6)
+
+def zmianaGracza():
+    global obecnyGracz
+
+    if (obecnyGracz == 'X'):
+        obecnyGracz = 'O'
+    else:
+        obecnyGracz = 'X'
+
+def buttonClick(index):
+    global przyciski
+    global obecnyGracz
+    global ostatniRuch
+
+    if przyciski[index]['text'] != '':
+        return
+
+    przyciski[index]['text'] = obecnyGracz
+    ostatniRuch = index
+
+    if sprawdzZwyciestwo():
+        messagebox.showinfo("Wygrana!", "Wygrał gracz " + obecnyGracz + "!")
+        czyscPlansze()
+        return
+
+    zmianaGracza()
+
+def przygotujPlansze():
+    global przyciski
+    global obecnyGracz
+
+    przyciski.append(Button(height = 5, width = 10, text = '', command = lambda: buttonClick(0)))
+    przyciski.append(Button(height = 5, width = 10, text = '', command = lambda: buttonClick(1)))
+    przyciski.append(Button(height = 5, width = 10, text = '', command = lambda: buttonClick(2)))
+    przyciski.append(Button(height = 5, width = 10, text = '', command = lambda: buttonClick(3)))
+    przyciski.append(Button(height = 5, width = 10, text = '', command = lambda: buttonClick(4)))
+    przyciski.append(Button(height = 5, width = 10, text = '', command = lambda: buttonClick(5)))
+    przyciski.append(Button(height = 5, width = 10, text = '', command = lambda: buttonClick(6)))
+    przyciski.append(Button(height = 5, width = 10, text = '', command = lambda: buttonClick(7)))
+    przyciski.append(Button(height = 5, width = 10, text = '', command = lambda: buttonClick(8)))
+
+    id = 0
+    for i in range(1, 4):
+        for j in range(1, 4):
+            przyciski[id].place(x = 10 + 90 * (i - 1), y = 10 + 95 * (j - 1))
+            id += 1
+
+def main():
+    przygotujOkno()
+
+main()
+    
